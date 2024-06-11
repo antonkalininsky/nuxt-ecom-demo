@@ -41,12 +41,12 @@
       </div>
       <div class="flex">
         <div
-          class="cursor-pointer hover:bg-red-500 hover:text-white w-20 h-20 flex justify-center items-center"
+          class="cursor-pointer hover:bg-red-500 hover:text-white w-20 h-20 flex justify-center items-center transition"
         >
           <Icon name="ph:currency-rub-light" size="2rem" />
         </div>
         <div
-          class="cursor-pointer hover:bg-red-500 hover:text-white w-20 h-20 flex justify-center items-center"
+          class="cursor-pointer hover:bg-red-500 hover:text-white w-20 h-20 flex justify-center items-center transition"
         >
           <Icon name="ion:cart-outline" size="2rem" />
         </div>
