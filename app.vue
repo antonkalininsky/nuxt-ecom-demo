@@ -1,56 +1,29 @@
 <template>
   <div>
-    <!-- header -->
-    <div
-      class="flex justify-between h-20 items-center px-10 text-sm font-bold border-b-2 w-100"
+    <NavMain />
+    <section
+      class="w-full bg-slate-800 h-[550px] flex flex-col justify-center items-center py-5 gap-y-5"
     >
-      <div class="flex items-center">
-        <div class="pr-12 cursor-pointer">
-          <img src="/images/logo.svg" alt="gamepay" class="w-48" />
-        </div>
-        <button
-          class="w-20 h-20 flex justify-center items-center border-x-2 hover:bg-red-500 hover:text-white transition"
-        >
-          <Icon name="material-symbols-light:menu" size="2rem" />
-        </button>
-        <nav>
-          <ul class="flex px-6">
-            <li
-              class="px-6 hover:text-red-500 cursor-pointer leading-10 transition"
-            >
-              КАТАЛОГ ПРОДУКЦИИ
-            </li>
-            <li
-              class="px-6 hover:text-red-500 cursor-pointer leading-10 transition"
-            >
-              ПОДДЕРЖКА
-            </li>
-            <li
-              class="px-6 hover:text-red-500 cursor-pointer leading-10 transition"
-            >
-              МОИ ПОКУПКИ
-            </li>
-          </ul>
-        </nav>
+      <!-- panels -->
+      <div class="w-4/5 h-full grid grid-cols-3 grid-rows-2">
+        <PanelItem class="row-span-2 col-span-2" is-main />
+        <PanelItem />
+        <PanelItem />
       </div>
-      <div
-        class="flex gap-x-3 items-center hover:text-red-500 cursor-pointer leading-10 transition"
-      >
-        <Icon name="material-symbols-light:search" size="2rem" color="red" />
-        <div>ПОИСК ИГР</div>
-      </div>
-      <div class="flex">
-        <div
-          class="cursor-pointer hover:bg-red-500 hover:text-white w-20 h-20 flex justify-center items-center transition"
-        >
-          <Icon name="ph:currency-rub-light" size="2rem" />
+      <!-- panels nav -->
+      <div class="flex justify-between items-center w-2/3 text-white">
+        <Icon name="mingcute:left-line" size="2rem" />
+        <div class="flex gap-x-2">
+          <div class="size-2 bg-white rounded-full"></div>
+          <div class="size-2 bg-white rounded-full"></div>
+          <div class="size-2 bg-white rounded-full"></div>
+          <div
+            class="size-2 bg-white rounded-full"
+            :class="{ 'bg-blue-500': true }"
+          ></div>
         </div>
-        <div
-          class="cursor-pointer hover:bg-red-500 hover:text-white w-20 h-20 flex justify-center items-center transition"
-        >
-          <Icon name="ion:cart-outline" size="2rem" />
-        </div>
+        <Icon name="mingcute:right-line" size="2rem" />
       </div>
-    </div>
+    </section>
   </div>
 </template>
